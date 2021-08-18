@@ -29,8 +29,6 @@ if __name__ == '__main__':
     
 
     suite.addTests(loader.loadTestsFromTestCase(testfile.Task))
-    #t1 = thread.Threading(target=
     runner = unittest.TextTestRunner()
     runner.run(suite)
-    #unittest.main()
 
