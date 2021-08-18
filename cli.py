@@ -4,7 +4,6 @@ from unittest.suite import TestSuite
 from runner import execute
 import subprocess
 
-#creating the argument parser
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--fs", help = "filesystem to mount",action='store')
@@ -15,7 +14,6 @@ parser.add_argument('--size', help="size of the lv",action='store')
 parser.add_argument('--vgname', help="volume group name to allocate lv",action='store')
 args = parser.parse_args()
 
-#getting the values from argument parser
 fs = args.fs
 dtr = args.dtr
 disk_name = args.disk
@@ -24,7 +22,6 @@ size = args.size
 vgname = args.vgname
 
 
-#loader to run the tests
 if __name__ == '__main__':
     import testfile
     suite = TestSuite()
